@@ -1,0 +1,50 @@
+#include<stdio.h>
+main ()
+
+{
+	int a, b;
+	int pollo, opc;
+	
+	do
+	{
+		printf("\nElige una opcion:");
+		printf("\n1.- Suma");
+		printf("\n2.- Resta\n");
+		scanf("%i",&opc);
+		
+		switch (opc)
+		{
+			case 1: printf("\nDato 1:\n");
+					scanf("%i",&a);
+					printf("\nDato 2:\n");
+					scanf("%i",&b);
+					
+					printf("\n la respuesta de la suma es: %i", suma(a, b));
+					break;
+					
+					
+			case 2: printf("\nDato 1:\n");
+					scanf("%i",&a);
+					printf("\nDato 2:\n");
+					scanf("%i",&b);
+					
+					printf("\n la respuesta de la resta es: %i", resta(a, b));
+					break;
+		}
+		printf("\n¿Lo quieres hacer otra vez?");
+		printf("\n1.- Si");
+		printf("\n2.- No\n");
+		scanf("%i",&pollo);
+	}while(pollo == 1);
+}
+
+
+suma(int a, int b)
+{
+	return (a + b);
+}
+
+resta(int a, int b)
+{
+	return (a - b);
+}
